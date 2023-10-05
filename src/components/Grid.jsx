@@ -222,7 +222,7 @@ export default function FitnessDataVisualization() {
     <Box sx={{ width: '100%' }}>
       <Grid container justifyContent="center" spacing={3}>
         {/* Pie Chart */}
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <Item>
             <div>
               <PieChart width={150} height={150}>
@@ -262,7 +262,7 @@ export default function FitnessDataVisualization() {
         </Grid>
 
         {/* Bar Chart */}
-        <Grid item xs={6}>
+        <Grid item xs={12} sm={12} md={6}>
           <Item>
             <div>
               <BarChart width={150} height={150} data={barChartDataOptions[barChartDataIndex].data}>
