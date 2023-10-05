@@ -4,32 +4,21 @@ import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Box from '@mui/material/Box';
 import { PieChart, Pie, Tooltip, Cell } from 'recharts';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as BarTooltip } from 'recharts';
-import { LineChart, Line } from 'recharts';
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  YAxis,
+  CartesianGrid,
+  Tooltip as BarTooltip,
+} from 'recharts';
+import { LineChart, Line } from 'recharts'; // Import LineChart and Line
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
 
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-];
-
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
-  ...theme.typography.body2,
-  padding: theme.spacing(2),
-  textAlign: 'center',
-  color: theme.palette.text.secondary,
-  display: 'flex',
-  flexDirection: 'column',
-  alignItems: 'center',
-  justifyContent: 'center',
-}));
-
+// CalorieBurnInfographic component
 const EmojiSymbol = styled('div')(({ size }) => ({
   fontSize: size,
 }));
@@ -145,9 +134,9 @@ export default function FitnessDataVisualization() {
 
   return (
     <Box sx={{ width: '100%' }}>
-      <Grid container spacing={3}>
+      <Grid container justifyContent="center" spacing={3}>
         {/* Pie Chart */}
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={4}>
           <Item>
             <div>
               <PieChart width={150} height={150}>
@@ -187,7 +176,7 @@ export default function FitnessDataVisualization() {
         </Grid>
 
         {/* Bar Chart */}
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={4}>
           <Item>
             <div>
               <BarChart width={150} height={150} data={barChartDataOptions[barChartDataIndex].data}>
@@ -216,10 +205,10 @@ export default function FitnessDataVisualization() {
         </Grid>
 
         {/* Line Chart */}
-        <Grid item xs={12} sm={6} md={6}>
+        <Grid item xs={4}>
           <Item>
             <div>
-              <LineChart width={150} height={150} data={lineChartDataOptions[lineChartDataIndex].data}>
+              <LineChart width={300} height={150} data={lineChartDataOptions[lineChartDataIndex].data}>
                 <XAxis dataKey="time" />
                 <YAxis />
                 <CartesianGrid strokeDasharray="3 3" />
@@ -244,10 +233,12 @@ export default function FitnessDataVisualization() {
           </Item>
         </Grid>
 
-        {/* CalorieBurnInfographic */}
-        <Grid item xs={12} sm={6} md={6}>
+        {/* Calorie Burn Infographic */}
+        <Grid item xs={4}>
           <Item>
-            <CalorieBurnInfographic />
+            <Paper>
+              <CalorieBurnInfographic />
+            </Paper>
           </Item>
         </Grid>
       </Grid>
