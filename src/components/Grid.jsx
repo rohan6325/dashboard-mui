@@ -10,13 +10,11 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Typography from '@mui/material/Typography';
+import CalorieBurnInfographic from './Calories';
+import LineCht from './LineCht';
 
-const data = [
-  { name: 'Group A', value: 400 },
-  { name: 'Group B', value: 300 },
-  { name: 'Group C', value: 300 },
-  { name: 'Group D', value: 200 },
-];
+// Define LineCht component and pass props
+
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
@@ -29,45 +27,6 @@ const Item = styled(Paper)(({ theme }) => ({
   alignItems: 'center',
   justifyContent: 'center',
 }));
-
-const EmojiSymbol = styled('div')(({ size }) => ({
-  fontSize: size,
-}));
-
-function CalorieBurnInfographic() {
-  const [caloriesBurned, setCaloriesBurned] = useState(0);
-  const maxCalories = 1000; // Updated maximum calories to 1000
-
-  const handleCaloriesChange = (event) => {
-    setCaloriesBurned(event.target.value);
-  };
-
-  // Calculate the size of the emoji symbol based on calories burned
-  const emojiSize = `${48 + (caloriesBurned / maxCalories) * 48}px`; // Larger initial size and growth
-
-  return (
-    <div>
-      <Typography variant="h5" gutterBottom>
-        Calories Burned: {caloriesBurned} kcal
-      </Typography>
-      <EmojiSymbol size={emojiSize}>🔥</EmojiSymbol>
-      <FormControl>
-        <Select
-          value={caloriesBurned}
-          onChange={handleCaloriesChange}
-          variant="outlined"
-          displayEmpty
-        >
-          <MenuItem value={0}>Select Calories Burned</MenuItem>
-          <MenuItem value={50}>50 kcal</MenuItem>
-          <MenuItem value={100}>100 kcal</MenuItem>
-          <MenuItem value={1000}>1000 kcal</MenuItem>
-          {/* Add more calorie options as needed */}
-        </Select>
-      </FormControl>
-    </div>
-  );
-}
 
 export default function FitnessDataVisualization() {
   const [pieChartDataIndex, setPieChartDataIndex] = useState(0);
@@ -218,35 +177,19 @@ export default function FitnessDataVisualization() {
         {/* Line Chart */}
         <Grid item xs={12} sm={6} md={6}>
           <Item>
-            <div>
-              <LineChart width={150} height={150} data={lineChartDataOptions[lineChartDataIndex].data}>
-                <XAxis dataKey="time" />
-                <YAxis />
-                <CartesianGrid strokeDasharray="3 3" />
-                <Line type="monotone" dataKey="rate" stroke="#8884d8" />
-                {/* You can customize the Line appearance as needed */}
-              </LineChart>
-            </div>
-            <FormControl sx={{ mt: 1 }}>
-              <Select
-                value={lineChartDataIndex}
-                onChange={handleLineChartChange}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Select Line Chart Dataset' }}
-              >
-                {lineChartDataOptions.map((option, index) => (
-                  <MenuItem key={index} value={index}>
-                    {option.label}
-                  </MenuItem>
-                ))}
-              </Select>
-            </FormControl>
+            {/* Render the LineCht (Line Chart) component */}
+            <LineCht
+              lineChartDataOptions={lineChartDataOptions}
+              handleLineChartChange={handleLineChartChange}
+              lineChartDataIndex={lineChartDataIndex}
+            />
           </Item>
         </Grid>
 
         {/* CalorieBurnInfographic */}
         <Grid item xs={12} sm={6} md={6}>
           <Item>
+            {/* Render the CalorieBurnInfographic component */}
             <CalorieBurnInfographic />
           </Item>
         </Grid>
