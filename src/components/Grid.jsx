@@ -13,10 +13,9 @@ import { pieChartDataOptions, barChartDataOptions, lineChartDataOptions } from '
 const theme = createTheme({
   palette: {
     primary: {
-      main: '#3498db', // Set your desired primary color
+      main: '#3498db',
     },
   },
-  // Add more theme customizations if needed
 });
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -50,12 +49,26 @@ export default function FitnessDataVisualization() {
     setLineChartDataIndex(event.target.value);
   };
 
+  const userPersonalInfo = {
+    username: 'Rohan',
+    age: 30,
+    weight: '70 kg',
+    height: '175 cm',
+    stride: '65 cm',
+  };
+
   return (
     <ThemeProvider theme={theme}>
       <Box sx={{ width: '100%' }}>
         <Grid container spacing={3}>
           <Grid item xs={12}>
-            <WelcomeBanner username="rohan" />
+            <WelcomeBanner
+              username={userPersonalInfo.username}
+              age={userPersonalInfo.age}
+              weight={userPersonalInfo.weight}
+              height={userPersonalInfo.height}
+              stride={userPersonalInfo.stride}
+            />
           </Grid>
 
           {/* Pie Chart */}
