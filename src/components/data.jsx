@@ -23,7 +23,7 @@ export const pieChartDataOptions = [
   
   export const barChartDataOptions = [
     {
-      label: 'Data 1',
+      label: 'Sunday',
       data: [
         { category: 'Running', value: 10 },
         { category: 'Squash', value: 20 },
@@ -32,7 +32,7 @@ export const pieChartDataOptions = [
       ],
     },
     {
-      label: 'Data 2',
+      label: 'Monday',
       data: [
         { category: 'Walking', value: 12 },
         { category: 'Running', value: 18 },
@@ -40,6 +40,33 @@ export const pieChartDataOptions = [
         { category: 'Basketball', value: 22 },
       ]
     },
+    {
+      label: 'Tuesday',
+      data: [
+        { category: 'Running', value: 15 },
+        { category: 'Squash', value: 22 },
+        { category: 'Cycling', value: 18 },
+        { category: 'Walking', value: 25 },
+      ]
+    },
+    {
+      label: 'Wednesday',
+      data: [
+        { category: 'Walking', value: 10 },
+        { category: 'Running', value: 20 },
+        { category: 'Swimming', value: 15 },
+        { category: 'Basketball', value: 25 },
+      ]
+    },
+    {
+      label: 'Thursday',
+      data: [
+        { category: 'Running', value: 23 },
+        { category: 'Squash', value: 13 },
+        { category: 'Cycling', value: 11 },
+        { category: 'Walking', value: 34 },
+      ]
+    }
       // Add more datasets as needed
     
   ];

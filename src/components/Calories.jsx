@@ -19,7 +19,7 @@ function CalorieBurnInfographic() {
   return (
     <div>
       <Typography variant="h5" gutterBottom>
-        Calories Burned: {caloriesBurned} kcal
+        {caloriesBurned?`Calories Burned: ${caloriesBurned} kcal`: "Calories Burned"}
       </Typography>
       <EmojiSymbol size={emojiSize}>🔥</EmojiSymbol>
       <FormControl>
