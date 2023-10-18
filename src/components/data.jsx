@@ -25,19 +25,19 @@ export const pieChartDataOptions = [
     {
       label: 'Data 1',
       data: [
-        { category: 'Category 1', value: 10 },
-        { category: 'Category 2', value: 20 },
-        { category: 'Category 3', value: 15 },
-        { category: 'Category 4', value: 25 },
+        { category: 'Running', value: 10 },
+        { category: 'Squash', value: 20 },
+        { category: 'Cycling', value: 15 },
+        { category: 'Walking', value: 25 },
       ],
     },
     {
       label: 'Data 2',
       data: [
-        { category: 'Category A', value: 12 },
-        { category: 'Category B', value: 18 },
-        { category: 'Category C', value: 14 },
-        { category: 'Category D', value: 22 },
+        { category: 'Walking', value: 12 },
+        { category: 'Running', value: 18 },
+        { category: 'Swimming', value: 14 },
+        { category: 'Basketball', value: 22 },
       ]
     },
       // Add more datasets as needed
@@ -50,9 +50,13 @@ export const pieChartDataOptions = [
       data: [
         { time: '00:00', rate: 70 },
         { time: '01:00', rate: 72 },
+        { time: '01:30', rate: 85 },
         { time: '02:00', rate: 75 },
+        { time: '02:30', rate: 80 },
         { time: '03:00', rate: 78 },
+        { time: '03:30', rate: 90 },
         { time: '04:00', rate: 80 },
+        { time: '04:30', rate: 85 },
         // Add more heart rate data points as needed
       
     ]
