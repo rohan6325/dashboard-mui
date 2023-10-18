@@ -3,6 +3,7 @@ import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
 
+// Define styled components
 const StyledWelcomeBanner = styled('div')(({ theme }) => ({
   backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
@@ -54,26 +55,18 @@ function WelcomeBanner({ username, age, weight, height, stride, profilePic }) {
           </Typography>
           <InfoRow>
             <InfoItem>
-              <Typography variant="subtitle1">
-                Age: {age}
-              </Typography>
+              <Typography variant="subtitle1">Age: {age}</Typography>
             </InfoItem>
             <InfoItem>
-              <Typography variant="subtitle1">
-                Weight: {weight}
-              </Typography>
+              <Typography variant="subtitle1">Weight: {weight}</Typography>
             </InfoItem>
           </InfoRow>
           <InfoRow>
             <InfoItem>
-              <Typography variant="subtitle1">
-                Height: {height}
-              </Typography>
+              <Typography variant="subtitle1">Height: {height}</Typography>
             </InfoItem>
             <InfoItem>
-              <Typography variant="subtitle1">
-                Stride: {stride}
-              </Typography>
+              <Typography variant="subtitle1">Stride: {stride}</Typography>
             </InfoItem>
           </InfoRow>
         </PersonalInfo>
