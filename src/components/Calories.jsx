@@ -7,21 +7,30 @@ import MenuItem from '@mui/material/MenuItem';
 
 function CalorieBurnInfographic() {
   const [caloriesBurned, setCaloriesBurned] = useState(0);
-  const maxCalories = 1000; // Updated maximum calories to 1000
+  const maxCalories = 1000;
 
   const handleCaloriesChange = (event) => {
     setCaloriesBurned(event.target.value);
   };
+
   const calorieChart = {"Sunday":500,"Monday":400,"Tuesday":600,"Wednesday":200,"Thursday":450,"Friday":410,"Saturday":340}
   // Calculate the size of the emoji symbol based on calories burned
   const emojiSize = `${48 + (caloriesBurned / maxCalories) * 48}px`; // Larger initial size and growth
 
+
   return (
-    <div>
+    <div style={{ position: 'relative', height: '200px', width: '200px' }}>
       <Typography variant="h5" gutterBottom>
         {caloriesBurned?`Calories Burned: ${caloriesBurned} kcal`: "Calories Burned"}
       </Typography>
-      <EmojiSymbol size={emojiSize}>🔥</EmojiSymbol>
+      <div style={{ position: 'absolute', top: overlapPosition, left: overlapPosition, zIndex: 0 }}>
+        <EmojiSymbol size={`96px`} opacity={0.3} style={{ zIndex: 0 }}>
+          🔥
+        </EmojiSymbol>
+        <EmojiSymbol size={emojiSize} style={{ zIndex: 1, position: 'absolute', top: `calc(50% - 24px)`, left: `calc(50% - 24px)` }}>
+          🔥
+        </EmojiSymbol>
+      </div>
       <FormControl>
         <Select
           value={caloriesBurned}
@@ -38,10 +47,7 @@ function CalorieBurnInfographic() {
             ))
             
           }
-{/*           
-          <MenuItem value={50}>Sunday</MenuItem>
-          <MenuItem value={100}>Monday</MenuItem>
-          <MenuItem value={1000}>Tuesday</MenuItem> */}
+
           {/* Add more calorie options as needed */}
         </Select>
       </FormControl>
