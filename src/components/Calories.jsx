@@ -47,9 +47,7 @@ function CalorieBurnInfographic() {
 function CalorieSelection({ caloriesBurned, handleCaloriesChange, calorieChart, emojiSize }) {
   return (
     <div>
-      <Typography variant="h5" gutterBottom>
-        Calories Burned: {caloriesBurned} kcal
-      </Typography>
+
       <EmojiSymbol size={emojiSize}>🔥</EmojiSymbol>
       <FormControl>
         <Select
