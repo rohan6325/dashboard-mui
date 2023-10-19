@@ -1,69 +1,113 @@
 export const pieChartDataOptions = [
   {
-    label: 'Dataset 1',
-    data: [
-      { name: 'A', value: 25 },
-      { name: 'B', value: 45 },
-      { name: 'C', value: 30 },
-    ],
-  },
-  {
-    label: 'Dataset 2',
-    data: [
-      { name: 'X', value: 10 },
-      { name: 'Y', value: 20 },
-      { name: 'Z', value: 15 },
-    ] 
-  },
-  // Add more datasets as needed
-];
-
-export const barChartDataOptions = [
-  {
     label: 'Sunday',
     data: [
-      { category: 'Running', value: 10 },
-      { category: 'Squash', value: 20 },
-      { category: 'Cycling', value: 15 },
-      { category: 'Walking', value: 25 },
+      { name: 'Running', value: 25 },
+      { name: 'Cycling', value: 45 },
+      { name: 'Swimming', value: 30 },
     ],
   },
   {
     label: 'Monday',
     data: [
-      { category: 'Walking', value: 12 },
-      { category: 'Running', value: 18 },
-      { category: 'Swimming', value: 14 },
-      { category: 'Basketball', value: 22 },
-    ]
+      { name: 'Squash', value: 10 },
+      { name: 'Running', value: 20 },
+      { name: 'Walking', value: 15 },
+      { name: 'Swimming', value: 30 },
+    ] 
   },
   {
     label: 'Tuesday',
     data: [
-      { category: 'Running', value: 15 },
-      { category: 'Squash', value: 22 },
-      { category: 'Cycling', value: 18 },
-      { category: 'Walking', value: 25 },
+      { name: 'Running', value: 20 },
+      { name: 'Cycling', value: 30 },
+      { name: 'Swimming', value: 50 },
     ]
   },
   {
     label: 'Wednesday',
     data: [
-      { category: 'Walking', value: 10 },
-      { category: 'Running', value: 20 },
-      { category: 'Swimming', value: 15 },
-      { category: 'Basketball', value: 25 },
+      { name: 'Running', value: 30 },
+      { name: 'Cycling', value: 30 },
+      { name: 'Swimming', value: 40 },
     ]
   },
   {
-    label: 'Thursday',
+    label: 'Thursday',  
     data: [
-      { category: 'Running', value: 23 },
-      { category: 'Squash', value: 13 },
-      { category: 'Cycling', value: 11 },
-      { category: 'Walking', value: 34 },
+      { name: 'Running', value: 40 },
+      { name: 'Cycling', value: 30 },
+      { name: 'Swimming', value: 30 },
+    ]
+  },
+  {
+    label: 'Friday',
+    data: [
+      { name: 'Running', value: 20 },
+      { name: 'Cycling', value: 30 },
+      { name: 'Swimming', value: 50 },
+    ]
+  },
+  {
+    label: 'Saturday',
+    data: [
+      { name: 'Running', value: 30 },
+      { name: 'Cycling', value: 40 },
+      { name: 'Swimming', value: 30 },
     ]
   }
+  // Add more datasets as needed
+];
+
+export const barChartDataOptions = [
+  {
+    label: 'Week 1',
+    data: [
+      { category: 'Sunday', value: 10000 },
+      { category: 'Monday', value: 13230 },
+      { category: 'Tuesday', value: 9870 },
+      { category: 'Wednesday', value: 9094 },
+      { category: 'Thursday', value: 12030 },
+      { category: 'Friday', value: 14567 },
+      { category: 'Saturday', value: 9889 },
+    ],
+  },
+  {
+    label: 'Week 2',
+    data: [
+      { category: 'Sunday', value: 10000 },
+      { category: 'Monday', value: 13230 },
+      { category: 'Tuesday', value: 10967 },
+      { category: 'Wednesday', value: 19999 },
+      { category: 'Thursday', value: 12367 },
+      { category: 'Friday', value: 2000 },
+      { category: 'Saturday', value: 3000 },
+    ]
+  },
+  {
+    label: 'Week 3',
+    data: [
+      { category: 'Sunday', value: 10000 },
+      { category: 'Monday', value: 13230 },
+      { category: 'Tuesday', value: 9870 },
+      { category: 'Wednesday', value: 10940 },
+      { category: 'Thursday', value: 12900 },
+      { category: 'Friday', value: 2000 },
+      { category: 'Saturday', value: 3000 },
+    ]
+  },
+  {
+    label: 'Week 4',
+    data: [
+      { category: 'Sunday', value: 10000 },
+      { category: 'Monday', value: 1323 },
+      { category: 'Tuesday', value: 10340 },
+      { category: 'Wednesday', value: 10940 },
+      { category: 'Thursday', value: 12900 },
+      { category: 'Friday', value: 10040 },
+      { category: 'Saturday', value: 11900 },
+    ]
+  },
   // Add more datasets as needed
 ];
 

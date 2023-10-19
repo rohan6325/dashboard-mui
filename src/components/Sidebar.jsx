@@ -30,7 +30,7 @@ function Sidebar(props) {
 
   const drawer = (
     <div>
-      <Typography variant="h4" component="div" sx={{ flexGrow: 1 }} >Fitness Tracker</Typography>
+      <Typography variant="h4" component="div" marginLeft={"10px"} textAlign={"left"} sx={{ flexGrow: 1 }} >ZenFit</Typography>
       <Divider />
       <List>
         {['Dashboard', 'Goals', 'Progress'].map((text, index) => (
@@ -83,7 +83,7 @@ function Sidebar(props) {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Dashboard
+            Biofeedback Hub
           </Typography>
         </Toolbar>
       </AppBar>

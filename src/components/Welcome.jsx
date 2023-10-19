@@ -2,22 +2,25 @@ import React from 'react';
 import Typography from '@mui/material/Typography';
 import Avatar from '@mui/material/Avatar';
 import { styled } from '@mui/material/styles';
+import profilePic from '../assets/profile.png';
+import illust from '../assets/banner.png'; // Ensure the correct path to the image
 
-// Define styled components
 const StyledWelcomeBanner = styled('div')(({ theme }) => ({
-  backgroundColor: theme.palette.primary.main,
   color: theme.palette.primary.contrastText,
   display: 'flex',
   alignItems: 'center',
   padding: theme.spacing(2),
   borderRadius: theme.spacing(1),
   boxShadow: '0 3px 6px rgba(0, 0, 0, 0.2)',
+  backgroundImage: `url(${illust})`,
+  backgroundSize:'cover'
 }));
+
 
 const UserInfo = styled('div')({
   display: 'flex',
   alignItems: 'center',
-  marginRight: '20px', // Add spacing between sections
+  marginRight: '20px',
 });
 
 const ProfilePic = styled(Avatar)(({ theme }) => ({
@@ -44,29 +47,29 @@ const InfoItem = styled('div')(({ theme }) => ({
   flex: 1,
 }));
 
-function WelcomeBanner({ username, age, weight, height, stride, profilePic }) {
+function WelcomeBanner({ username, age, weight, height, stride }) {
   return (
     <StyledWelcomeBanner>
       <UserInfo>
         <ProfilePic alt="User Profile" src={profilePic} />
         <PersonalInfo>
-          <Typography variant="h4" gutterBottom>
+          <Typography color={"black"} variant="h4" gutterBottom>
             Welcome Back, {username}!
           </Typography>
           <InfoRow>
             <InfoItem>
-              <Typography variant="subtitle1">Age: {age}</Typography>
+              <Typography color={"black"} variant="subtitle1">Age: {age}</Typography>
             </InfoItem>
             <InfoItem>
-              <Typography variant="subtitle1">Weight: {weight}</Typography>
+              <Typography color={"black"} variant="subtitle1">Weight: {weight}</Typography>
             </InfoItem>
           </InfoRow>
           <InfoRow>
             <InfoItem>
-              <Typography variant="subtitle1">Height: {height}</Typography>
+              <Typography color={"black"} variant="subtitle1">Height: {height}</Typography>
             </InfoItem>
             <InfoItem>
-              <Typography variant="subtitle1">Stride: {stride}</Typography>
+              <Typography color={"black"} variant="subtitle1">Stride: {stride}</Typography>
             </InfoItem>
           </InfoRow>
         </PersonalInfo>

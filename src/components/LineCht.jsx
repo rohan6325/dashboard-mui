@@ -4,14 +4,18 @@ import { LineChart, Line,Tooltip} from 'recharts';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import Typography from '@mui/material/Typography';
+
 
 export default function LineCht({ lineChartDataOptions, handleLineChartChange, lineChartDataIndex }) {
     return (
       <>
         <div>
           {/* Line Chart code */}
-
-          <LineChart width={350} height={250} data={lineChartDataOptions[lineChartDataIndex].data}>
+          <Typography variant="h5" gutterBottom>
+        CardioOxy Monitor
+      </Typography>
+          <LineChart width={400} height={250} data={lineChartDataOptions[lineChartDataIndex].data}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="time" />
             <YAxis />

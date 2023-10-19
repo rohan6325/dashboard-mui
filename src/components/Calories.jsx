@@ -12,7 +12,7 @@ function CalorieBurnInfographic() {
   const handleCaloriesChange = (event) => {
     setCaloriesBurned(event.target.value);
   };
-  const calorieChart = {"Sunday":500,"Monday":400,"Tuesday":600,"Wednesday":200,"Thursday":450,"Friday":410,"Saturday":340}
+  const calorieChart = {"Sunday":1000,"Monday":400,"Tuesday":600,"Wednesday":200,"Thursday":450,"Friday":410,"Saturday":340}
   // Calculate the size of the emoji symbol based on calories burned
   const emojiSize = `${48 + (caloriesBurned / maxCalories) * 48}px`; // Larger initial size and growth
 
