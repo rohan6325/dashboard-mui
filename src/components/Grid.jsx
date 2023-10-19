@@ -63,7 +63,7 @@ export default function FitnessDataVisualization() {
     <ThemeProvider theme={theme}>
       <Box sx={{ width: '100%' }}>
         <Grid container spacing={3}>
-          <Grid item xs={12}>
+          <Grid item xs={12} sm={12} md={12}>
             <WelcomeBanner
               username={userPersonalInfo.username}
               age={userPersonalInfo.age}

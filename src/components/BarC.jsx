@@ -1,11 +1,15 @@
-import React from 'react';
+// Removed unused import statement
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip as BarTooltip } from 'recharts';
 import { FormControl, Select, MenuItem } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 function BarC({ data, onChange, selectedIndex }) {
   return (
     <div>
-      <BarChart width={150} height={150} data={data[selectedIndex].data}>
+        <Typography variant="h5" gutterBottom>
+        Activity Breakup
+      </Typography>
+      <BarChart width={200} height={200} data={data[selectedIndex].data}>
         <XAxis dataKey="category" />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />

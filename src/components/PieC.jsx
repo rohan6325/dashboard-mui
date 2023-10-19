@@ -1,18 +1,22 @@
 import React from 'react';
 import { PieChart, Pie, Tooltip, Cell } from 'recharts';
 import { FormControl, Select, MenuItem } from '@mui/material';
+import Typography from '@mui/material/Typography';
 
 function PieC({ data, onChange, selectedIndex }) {
   return (
     <div>
-      <PieChart width={150} height={150}>
+      <Typography variant="h5" gutterBottom>
+        Activity Breakup
+      </Typography>
+      <PieChart width={200} height={200}>
         <Pie
           dataKey="value"
           data={data[selectedIndex].data}
           cx="50%"
           cy="50%"
-          innerRadius={30}
-          outerRadius={60}
+          innerRadius={50}
+          outerRadius={90}
           fill="#8884d8"
           startAngle={90}
           endAngle={-270}

@@ -13,16 +13,15 @@ function CalorieBurnInfographic() {
     setCaloriesBurned(event.target.value);
   };
 
-  // Calculate the emoji size
-  const emojiSize = `${48 + (caloriesBurned / maxCalories) * 48}px`;
+  const calorieChart = {"Sunday":500,"Monday":400,"Tuesday":600,"Wednesday":200,"Thursday":450,"Friday":410,"Saturday":340}
+  // Calculate the size of the emoji symbol based on calories burned
+  const emojiSize = `${48 + (caloriesBurned / maxCalories) * 48}px`; // Larger initial size and growth
 
-  // Calculate the positions to make the emojis overlap
-  const overlapPosition = `calc(50% - (${emojiSize} / 2))`;
 
   return (
     <div style={{ position: 'relative', height: '200px', width: '200px' }}>
       <Typography variant="h5" gutterBottom>
-        Calories Burned: {caloriesBurned} kcal
+        {caloriesBurned?`Calories Burned: ${caloriesBurned} kcal`: "Calories Burned"}
       </Typography>
       <div style={{ position: 'absolute', top: overlapPosition, left: overlapPosition, zIndex: 0 }}>
         <EmojiSymbol size={`96px`} opacity={0.3} style={{ zIndex: 0 }}>
@@ -40,9 +39,15 @@ function CalorieBurnInfographic() {
           displayEmpty
         >
           <MenuItem value={0}>Select Calories Burned</MenuItem>
-          <MenuItem value={50}>50 kcal</MenuItem>
-          <MenuItem value={500}>100 kcal</MenuItem>
-          <MenuItem value={1000}>1000 kcal</MenuItem>
+          {
+            Object.keys(calorieChart).map((day, index) => (
+              <MenuItem key={index} value={calorieChart[day]}>
+                {day}
+              </MenuItem>
+            ))
+            
+          }
+
           {/* Add more calorie options as needed */}
         </Select>
       </FormControl>
