@@ -10,7 +10,7 @@ function BarC({ data, onChange, selectedIndex }) {
         <Typography variant="h5" gutterBottom>
         Activity Breakup
       </Typography>
-      <BarChart width={200} height={200} data={data[selectedIndex].data}>
+      <BarChart width={250} height={200} data={data[selectedIndex].data}>
         <XAxis dataKey="category" />
         <YAxis />
         <CartesianGrid strokeDasharray="3 3" />
